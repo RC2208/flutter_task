@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
+​
 void main() {
   runApp(MyApp());
 }
-
+​
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,35 +11,39 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
+       
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      
+      
     );
   }
 }
-
+​
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+​
+  final  title;
+ 
+​
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-
+​
 class _MyHomePageState extends State<MyHomePage> {
-  String _counter = 0;
-
+  int _counter = 0;
+​
   void _incrementCounter() {
     setState(() {
       _counter++;
     });
   }
-
+​
   @override
   Widget build(BuildContext context) {
-    return UI(
-      appBar: AppBar(
-        title: Text(widget.title),
+    return MaterialApp(
+         MyHomePage(
+        title: Text(this.title),
       ),
       body: Center(
         child: Column(
@@ -63,3 +67,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+​
